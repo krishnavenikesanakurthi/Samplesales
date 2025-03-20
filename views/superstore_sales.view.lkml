@@ -15,7 +15,7 @@ view: superstore_sales {
     sql: ${TABLE}.Country ;;
   }
   dimension: customer_id {
-    type: number
+    type: string
     sql: ${TABLE}.`Customer ID` ;;
   }
   dimension: customer_name {
