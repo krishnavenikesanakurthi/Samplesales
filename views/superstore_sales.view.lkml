@@ -121,6 +121,10 @@ view: superstore_sales {
     type: sum
     sql: ${sales} ;;
   }
+  measure: total_profit {
+    type: sum
+    sql: ${profit} ;;
+  }
   measure: sales_per_customer {
     type: number
     sql: ${total_sales} / COUNT(DISTINCT ${customer_id}) ;;
