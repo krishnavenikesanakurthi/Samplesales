@@ -13,6 +13,7 @@ view: superstore_sales {
     type: string
     map_layer_name: countries
     sql: ${TABLE}.Country ;;
+    drill_fields: [city, state, postal_code, region, count]
   }
   dimension: customer_id {
     type: string
@@ -120,10 +121,12 @@ view: superstore_sales {
   measure: total_sales {
     type: sum
     sql: ${sales} ;;
+    drill_fields: [product_id, sales, count ]
   }
   measure: total_profit {
     type: sum
     sql: ${profit} ;;
+    drill_fields: [product_id, profit]
   }
   measure: sales_per_customer {
     type: number
